@@ -1,0 +1,10 @@
+# ignore files
+.DS_Store
+Thumbs.db
+~*.*
+
+# ignore files
+/*.txt
+
+# ignore rep
+/z_zip

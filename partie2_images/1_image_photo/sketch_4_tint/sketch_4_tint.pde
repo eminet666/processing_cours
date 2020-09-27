@@ -10,5 +10,6 @@ void draw() {
   tint(255,0,0);
   image(img, 0, 0);
   tint(0,255,255);
+  //tint(0,mouseX,mouseY);
   image(img, 0, 361);
 }

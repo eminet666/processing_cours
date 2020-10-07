@@ -4,13 +4,11 @@ Sprite anim;
 void setup() {
   size(300,300);
   frameRate(30);
-  
   anim = new Sprite("fish_", 4);   // paramètre sprite : filename image, nb image
 }
 
 void draw() {
     background(0,128,255);
-    
     // étape 0
     //image(anim.img[0], 0,0);  
     

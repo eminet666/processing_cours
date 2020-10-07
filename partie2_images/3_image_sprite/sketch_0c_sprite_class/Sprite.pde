@@ -37,7 +37,7 @@ class Sprite {
   
   }
   
-  // étape 3 : déplacement
+  // étape 3 : déplacement dans la scène
   void move() {  // Object only moves horizontally
       x += speed;
       if (x > width) {

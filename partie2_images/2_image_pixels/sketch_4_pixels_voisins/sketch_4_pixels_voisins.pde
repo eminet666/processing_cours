@@ -26,8 +26,8 @@ void draw() {
       float b1 = brightness(img.pixels[loc1]);
       float b2 = brightness(img.pixels[loc2]);       
       
-      float diff = abs(b1-b2);
-      pixels[loc1]= color(diff);
+      //float diff = abs(b1-b2);
+      //pixels[loc1]= color(diff);
       
       float diff = abs(b1-b2);
       if (diff > 20) {

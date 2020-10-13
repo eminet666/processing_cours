@@ -1,13 +1,14 @@
 int nb_bancs = 5;
 Fish[] poissons = new Fish[nb_bancs];
+int[] triZ = new int[0];
 
 int camX=0, camY=0;
-boolean debug = false;
 color ocean = color(0,150,200);
+boolean debug = false;
 
 void setup(){
-  //size(600,600, P3D);
-  fullScreen(P3D);
+  size(600,600, P3D);
+  //fullScreen(P3D);
   frameRate(30);
   
   // filename, nb_images, nb poissons, vitesse, couleur ou no
@@ -16,7 +17,15 @@ void setup(){
   poissons[2] = new Fish("fish_1_", 1, 5, 8, color(255,0,0));
   poissons[3] = new Fish("fish_1_", 1, 3, 8, color(0,255,0));  
   poissons[4] = new Fish("fish_1_", 1, 1, 8, color(0,0,255));    
+
+  for(int i = 0; i < nb_bancs; i++) {   
+    triZ = append(triZ, poissons[i].z);
+    triZ = sort(triZ);
+  }
+
 }
+
+
 
 void draw (){
   
@@ -26,12 +35,15 @@ void draw (){
   translate(width/2, height*3/4, 0);
   setPerspective();
  
-  for(int i = 0; i < nb_bancs; i++){   
-      poissons[i].display();
-      poissons[i].next();
-      poissons[i].move();
+  for(int j = 0; j < nb_bancs; j++){  
+      for(int i = 0; i < nb_bancs; i++) {
+          if(triZ[j] == poissons[i].z) {
+            poissons[i].display();
+            poissons[i].next();
+            poissons[i].move();
+          }
+      }
   }
-
 }
 
 void setPerspective() {

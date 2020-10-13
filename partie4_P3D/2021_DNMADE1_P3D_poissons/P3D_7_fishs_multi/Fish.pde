@@ -37,11 +37,11 @@ class Fish {
        //x[0] = int(random(-100,100));
        //y[0] = -233;
        for(int i = 0; i < nb; i++) {
-         x[i] = -l+ int(random(-100,100));
+         x[i] = -l+ int(random(-150,150));
          y[i] = int(random(-600,200)); 
          //println(shiftX[i]+"_"+shiftY[i]);
        }
-       z = int(random(-2000,0));
+       z = int(random(-2000, 0));
 
    }
  

@@ -7,8 +7,8 @@ color ocean = color(0,150,200);
 boolean debug = false;
 
 void setup(){
-  size(600,600, P3D);
-  //fullScreen(P3D);
+  //size(600,600, P3D);
+  fullScreen(P3D);
   frameRate(30);
   
   // filename, nb_images, nb poissons, vitesse, couleur ou no

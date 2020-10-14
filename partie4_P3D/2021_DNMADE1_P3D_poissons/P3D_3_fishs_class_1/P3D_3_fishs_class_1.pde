@@ -1,14 +1,16 @@
-Fish[] poisson = new Fish[1];
+// Etape 1 : 1 seul poisson (1 seule occurence de l'objet Fish
+//           10 poissons dans le banc (1 parametre de plus)
+Fish poisson;
 
-int camX=0, camY=0;
-boolean debug = true;
+boolean debug = true;     // permet d'afficher les axes et contour images
 color ocean = color(0,150,200);
 
 void setup(){
   size(600,600, P3D);
   frameRate(30);
   
-  poisson[0] = new Fish("fish_", 1, 10);
+  // syntaxe du constructeur : Fish( filename, nb_images, nb poissons
+  poisson = new Fish("fish_", 1, 10);
 }
 
 void draw (){
@@ -19,12 +21,13 @@ void draw (){
   translate(width/2, height*3/4, 0);
   setPerspective();
   
-  poisson[0].display();
+  poisson.display();
 
 }
 
 void setPerspective() {
-  //camX=0; camY=0;
+  int camX, camY;
+  //camX=0; camY=0;                    // point de vue fixe
   camX = int(map(mouseY, 0, height, -5, -45));
   camY = int(map(mouseX, 0, width, -20, 20));
   rotateX(radians(camX));                   

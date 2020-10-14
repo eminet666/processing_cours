@@ -10,7 +10,6 @@ void draw (){
   background(100);
   //noStroke();
   stroke(255);
-  fill(0,0,0,0); // Side effect = Sets gl.BLEND
 
   translate(width/2, height/2, 0);
 

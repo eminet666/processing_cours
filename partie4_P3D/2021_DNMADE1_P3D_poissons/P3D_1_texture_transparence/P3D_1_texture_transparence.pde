@@ -30,7 +30,7 @@ void draw (){
     vertex(0, -100, 0, 0, 133);
   endShape(CLOSE);
 
-  // forme 2 (devant)
+  // forme 2 (devant) CA MARCHE AUSSI AVEC LE MEME Z !!!!
   beginShape();
     texture(img);
     noTint();

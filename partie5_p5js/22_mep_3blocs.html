@@ -1,4 +1,4 @@
-<!-- https://la-cascade.io/centrer-une-div-guide-complet/ -->
+<!-- https://www.isitcode.net/ajouter-plusieurs-sketchs-dans-une-page-instance-mode -->
 <!doctype html>
 <html>
 
@@ -7,7 +7,7 @@
         <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
         <script src="22_mep_3blocs.js"></script> -->
         <style>
-        * { margin: 0; padding: 0;}
+        * { margin: 0; padding: 0; overflow: hidden;}
         .container
         {
              display: flex;
@@ -33,7 +33,7 @@
              width: 200px; height: 200px;
 
         }
-        .processing { width: 200px; height: 200px; padding: 10px;}
+        iframe { width: 300px; height: 300px; border:none; }
         </style>
     </head>
 
@@ -41,13 +41,13 @@
         <div class="container">
             <div class="item">
                 <div id="gauche" class="bloc">
-                    <iframe src="./22_iframe.html" class="processing">
+                    <!-- <iframe src="./22_iframe_0.html" class="processing"> -->
                 </div>
                 <div id="centre" class="bloc">
-                    <iframe src="./22_iframe0.html" class="processing">
+                    <!-- <iframe src="./22_iframe_1.html" class="processing"> -->
                 </div>
                 <div id="droite" class="bloc">
-                    <iframe src="./22_iframe.html" class="processing">
+                    <!-- <iframe src="./22_iframe_2.html" class="processing"> -->
                 </div>
             </div>
         </div>

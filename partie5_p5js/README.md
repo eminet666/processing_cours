@@ -30,3 +30,7 @@
 * [reference](https://github.com/processing/p5.js/wiki/Processing-transition)
 * [guidelines_fr](http://gerard.paresys.free.fr/Methodes/Methode-Processing-p5.html)
 * [converter](http://faculty.purchase.edu/joseph.mckay/p5jsconverter.html)
+
+# A REGARDER
+* [isitcode](https://www.isitcode.net/)
+* [use&modify_typo](https://usemodify.com/)

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script> -->
+    <script src="https://unpkg.com/ccapture.js@1.1.0/build/CCapture.all.min.js"></script>
+
+    <meta charset="utf-8">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+    function setup() {
+        // console.log(windowWidth+"_"+windowHeight)
+        createCanvas(windowWidth, windowHeight);
+        background(0);
+        translate(15, 15);
+
+        //Première boucle (hauteur)
+        for (var y = 0; y < 100; y = y + 1) {
+            //Seconde boucle (largeur)
+            for (var x = 0; x < 100; x = x + 1) {
+                fill(random(255));
+                rect(x * 30, y * 30, 20, 20);
+            }
+        }
+
+        for (var i = 0; i < 100; i++) {
+            var dimension =random(20);
+            fill(random(10, 10), random(10), random(10, 10));
+            console.log(dimension);
+            rect(random(200), random(200), dimension, dimension);
+        }
+    }
+    </script>
+
+</body>
+
+</html>

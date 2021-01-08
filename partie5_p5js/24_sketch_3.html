@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script> -->
+    <script src="https://unpkg.com/ccapture.js@1.1.0/build/CCapture.all.min.js"></script>
+
+    <meta charset="utf-8">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+    var r = 0;
+    var back1;
+    var back2;
+    var back3;
+
+    function setup() {
+        // createCanvas(200, 200);
+        // console.log(windowWidth+"_"+windowHeight)
+        createCanvas(windowWidth, windowHeight);
+        back1 = random(0, 255);
+        back2 = random(0, 255);
+        back3 = random(0, 255);
+
+        background(back1, back2, back3);
+        rectMode(CENTER);
+
+        noStroke();
+        smooth();
+        frameRate(15);
+    }
+
+    function draw() {
+        fill(back1, back2, back3, 50);
+        rect(width / 2, height / 2, width, height);
+
+        fill(255);
+        //les carrés suivent la souris
+        translate(mouseX, mouseY);
+
+        rotate(r);
+        rect(0, 0, 50, 50);
+
+        r = r + 0.05;
+
+    }
+
+    function sleep(milliseconds) {
+        const date = Date.now();
+        var currentDate = null;
+        do {
+            currentDate = Date.now();
+        } while (currentDate - date < milliseconds);
+    }
+
+    </script>
+
+</body>
+
+</html>

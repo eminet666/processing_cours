@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://unpkg.com/ccapture.js@1.1.0/build/CCapture.all.min.js"></script>
+
+    <meta charset="utf-8">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let myFont;
+
+        function preload() {
+            myFont = loadFont('space-grotesk.light.otf');
+        }
+
+        var xpos = 50;
+        var speed = 1.8;
+
+
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+            textAlign(CENTER, CENTER);
+            noCursor();
+
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
+
+        function draw() {
+            background('#f8fab8');
+            strokeWeight(3);
+            ellipseMode(CENTER);
+            rectMode(CENTER);
+
+            xpos = xpos + speed;
+
+            if ((xpos > width - 50) || (xpos < 50)) {
+                speed = speed * -1;
+            }
+
+            fill(204, 240, 225);
+            noStroke();
+
+            if (mouseIsPressed) {
+                ellipse(height / 2, xpos, 50, 50);
+            } else {
+                rect(height / 2, xpos, 50, 50);
+            }
+
+            push();
+            textSize(width / 12);
+            textFont(myFont);
+            fill(0);
+            noStroke();
+            text('vertical', mouseX, mouseY);
+            pop();
+
+            for (var x = 10; x < windowWidth; x = x + 40) {
+                for (var y = 10; y < windowWidth; y = y + 40) {
+                    push();
+                    translate(x, y);
+                    dessiner();
+                    pop();
+                }
+            }
+
+        }
+
+        function dessiner() {
+            fill('#f76a8c');
+            rect(10, 10, 5, 5);
+        }
+    </script>
+
+</body>
+
+</html>
